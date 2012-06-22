@@ -1,0 +1,50 @@
+<%= error_messages_for 'join_request' %>
+
+<!--[form:join_request]-->
+<p><label for="join_request_first_name">First name</label><br/>
+<%= text_field 'join_request', 'first_name'  %></p>
+
+<p><label for="join_request_middle_name">Middle name</label><br/>
+<%= text_field 'join_request', 'middle_name'  %></p>
+
+<p><label for="join_request_last_name">Last name</label><br/>
+<%= text_field 'join_request', 'last_name'  %></p>
+
+<p><label for="join_request_line1">Line1</label><br/>
+<%= text_field 'join_request', 'line1'  %></p>
+
+<p><label for="join_request_line2">Line2</label><br/>
+<%= text_field 'join_request', 'line2'  %></p>
+
+<p><label for="join_request_city">City</label><br/>
+<%= text_field 'join_request', 'city'  %></p>
+
+<p><label for="join_request_state">State</label><br/>
+<select id="join_request_state_id" name="join_request[state_id]">
+<% @states.each do |state| -%>
+<option value="<%= state.id %>"<%= ' selected' if state.id == @join_request.state_id %>><%= state.name %></option>
+<% end %>
+</select></p>
+
+<p><label for="join_request_zip_code">Zip code</label><br/>
+<%= text_field 'join_request', 'zip_code'  %></p>
+
+<p><label for="join_request_home_phone">Home phone</label><br/>
+<%= text_field 'join_request', 'home_phone'  %></p>
+
+<p><label for="join_request_business_phone">Business phone</label><br/>
+<%= text_field 'join_request', 'business_phone'  %></p>
+
+<p><label for="join_request_mobile_phone">Mobile phone</label><br/>
+<%= text_field 'join_request', 'mobile_phone'  %></p>
+
+<p><label for="join_request_email_address">Email address</label><br/>
+<%= text_field 'join_request', 'email_address'  %></p>
+
+<p><label for="join_request_dues_amount">Dues Payment</label><br/>
+<%= text_field 'join_request', 'dues_amount'  %></p>
+
+<p><label for="join_request_why_interested">Why are you interested in becoming a member</label><br/>
+<%= text_area 'join_request', 'why_interested'  %></p>
+<!--[eoform:join_request]-->
+

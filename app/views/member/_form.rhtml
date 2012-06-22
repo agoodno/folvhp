@@ -1,0 +1,47 @@
+<%= error_messages_for 'member' %>
+
+<!--[form:member]-->
+<div id="maint-form">
+<p><label for="member_first_name">First name</label><br/>
+<%= text_field 'member', 'first_name'  %></p>
+
+<p><label for="member_last_name">Last name</label><br/>
+<%= text_field 'member', 'last_name'  %></p>
+
+<p><label for="member_household">Household</label><br/>
+<select id="member_household_id" name="member[household_id]">
+<option value="" selected="true">---Select---</option>
+<% @households.each do |household| -%>
+<option value="<%= household.id %>"<%= ' selected' if household.id == @member.household_id %>><%= household.name %></option>
+<% end %>
+</select></p>
+
+<p><label for="member_member_level">Member Level</label><br/>
+<select id="member_member_level_id" name="member[member_level_id]">
+<option value="" selected="true">---Select---</option>
+<% @member_levels.each do |member_level| -%>
+<option value="<%= member_level.id %>"<%= ' selected' if member_level.id == @member.member_level_id %>><%= member_level.description %></option>
+<% end %>
+</select></p>
+
+<p><label for="member_board_title">Board Title</label><br/>
+<select id="member_board_title_id" name="member[board_title_id]">
+<option value="" selected="true">---Select---</option>
+<% @board_titles.each do |board_title| -%>
+<option value="<%= board_title.id %>"<%= ' selected' if board_title.id == @member.board_title_id %>><%= board_title.description %></option>
+<% end %>
+</select></p>
+
+<p><label for="member_home_phone">Home phone</label><br/>
+<%= text_field 'member', 'home_phone'  %></p>
+
+<p><label for="member_business_phone">Business phone</label><br/>
+<%= text_field 'member', 'business_phone'  %></p>
+
+<p><label for="member_mobile_phone">Mobile phone</label><br/>
+<%= text_field 'member', 'mobile_phone'  %></p>
+
+<p><label for="member_email_address">Email address</label><br/>
+<%= text_field 'member', 'email_address'  %></p>
+</div>
+<!--[eoform:member]-->

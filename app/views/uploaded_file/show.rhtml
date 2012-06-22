@@ -1,0 +1,10 @@
+<h2>Showing File</h2>
+
+<% for column in UploadedFile.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @uploaded_file.send(column.name) %>
+</p>
+<% end %>
+<br/>
+<%= link_to 'Edit', :action => 'edit', :id => @uploaded_file %> |
+<%= link_to 'Back', :action => 'list' %>

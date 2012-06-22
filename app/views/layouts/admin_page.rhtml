@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Friends of Lake View Hill Park - Admin</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="shortcut icon" type="ximage/icon" href="/favicon.ico" />
+  <%= stylesheet_link_tag "screen" , :media => "screen" %>
+  <%= stylesheet_link_tag "print" , :media => "print" %>
+  <%= stylesheet_link_tag "dev" , :media => "all" %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "fckeditor" %>  
+  <%= calendar_date_select_includes "silver" %>
+  
+  <script type="text/javascript">
+window.onload = function()
+{
+var oFCKeditor = new FCKeditor( 'page_content' ) ;
+oFCKeditor.ReplaceTextarea() ;
+}
+  </script>
+
+</head>
+
+<body>
+<%= link_to image_tag("/images/folvhp_banner.jpg", :alt => "Friends of Lake View Hill Park", :class => "logo"), :controller => 'page', :action => 'view', :title => 'welcome' %>
+<div id="page">
+
+<div id="topnav">
+<%= link_to 'Home', :controller => 'page', :action => 'view', :title => 'welcome' %>
+<%= link_to 'Admin', :controller => 'admin' %>
+<%= link_to 'Logout', :controller => 'user', :action => 'logout' %>
+</div>
+<div id="sidenav">
+<%= link_to "Board Titles", :controller => 'board_title', :action => 'list' %>
+<%= link_to "Dues Types", :controller => 'dues_type', :action => 'list' %>
+<%= link_to "Events", :controller => 'event', :action => 'list' %>
+<%= link_to "Files", :controller => 'uploaded_file', :action => 'list' %>
+<%= link_to "Households", :controller => 'household', :action => 'list' %>
+<%= link_to "Join Requests", :controller => 'join_requests' %>
+<%= link_to "Members", :controller => 'member', :action => 'list' %>
+<%= link_to "Member Levels", :controller => 'member_level', :action => 'list' %>
+<%= link_to 'News', :controller => 'stories', :action => 'index' %>
+<%= link_to "Pages", :controller => 'page', :action => 'list' %>
+<%= link_to "Sightings", :controller => 'sighting', :action => 'list' %>
+<%= link_to "States", :controller => 'state', :action => 'list' %>
+<%= link_to "Users", :controller => 'user', :action => 'list' %>
+</div>
+
+<div id="container">
+<div id="onecol">
+  <% if flash[:notice] -%>
+    <div id="notice" ><%= flash[:notice] %></div>
+  <% end -%>
+  <%= yield :layout %>
+  <div class="lastUpdated">Last updated: September 4, 2007 | <%= link_to 'Comment on this page', :controller => 'comment', :id => params[:title] %></div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>

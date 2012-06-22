@@ -1,0 +1,14 @@
+<%= error_messages_for 'user' %>
+
+<!--[form:user]-->
+<div id="maint-form">
+<p><label for="user_name">Name</label><br/>
+<%= text_field 'user', 'name'  %></p>
+
+<p><label for="user_password">Password:</label><br/>
+<%= password_field 'user', 'password'  %></p>
+
+<label for="user_password_confirmation">Confirm:</label><br/>
+<%= password_field 'user', 'password_confirmation'  %></p>
+</div>
+<!--[eoform:user]-->

@@ -1,0 +1,25 @@
+<div id="maint-list">
+<h2>News Stories</h2>
+
+<table class="maint">
+  <tr>
+    <td class="maintheader">Headline</td>
+    <td class="maintheaderactionlabel" colspan="3"><%= link_to 'New', :action => 'new' %></td>
+  </tr>
+  
+<% for story in @stories %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="maint"><%= story.headline %></td>
+    <td class="maintactionlabel">
+      <%= link_to 'Show', story_path(story) %>
+      <%= link_to 'Edit', edit_story_path(story) %>
+      <%= link_to 'Delete', story_path(story), :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
+<!--
+ link_to 'Previous page', { :page => @stories.current.previous } if @stories.current.previous 
+ link_to 'Next page', { :page => @stories.current.next } if @stories.current.next 
+-->
+</div>

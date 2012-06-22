@@ -1,0 +1,10 @@
+<h2>Showing Household</h2>
+
+<% for column in Household.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @household.send(column.name) %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', :action => 'edit', :id => @household %> |
+<%= link_to 'Back', :action => 'list' %>

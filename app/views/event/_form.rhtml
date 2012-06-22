@@ -1,0 +1,18 @@
+<%= error_messages_for 'event' %>
+
+<!--[form:event]-->
+<div id="maint-form">
+<p><label for="event_title">Title</label><br/>
+<%= text_field 'event', 'title'  %></p>
+
+<p><label for="event_description">Description</label><br/>
+<%= text_area 'event', 'description'  %></p>
+
+<p><label for="start_date_time">Start Date/Time</label><br/>
+<%= calendar_date_select 'event', 'start_date_time', :time => :mixed %></p>
+
+<p><label for="end_date_time">End Date/Time</label><br/>
+<%= calendar_date_select 'event', 'end_date_time', :time => :mixed %></p>
+</div>
+<!--[eoform:event]-->
+

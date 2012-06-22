@@ -1,0 +1,25 @@
+<div id="maint-list">
+<h2>Dues Types</h2>
+
+<table class="maint">
+  <tr>
+    <td class="maintheader">Description</td>
+    <td class="maintheaderactionlabel" colspan="3"><%= link_to 'New', :action => 'new' %></td>
+  </tr>
+  
+<% for dues_type in @dues_types %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="maint"><%=h dues_type.description %></td>
+    <td class="maintactionlabel">
+      <%= link_to 'Show', :action => 'show', :id => dues_type %>
+      <%= link_to 'Edit', :action => 'edit', :id => dues_type %>
+      <%= link_to 'Delete', { :action => 'destroy', :id => dues_type }, :confirm => 'Are you sure?', :method => :post %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @dues_type_pages.current.previous } if @dues_type_pages.current.previous %>
+<%= link_to 'Next page', { :page => @dues_type_pages.current.next } if @dues_type_pages.current.next %> 
+
+</div>

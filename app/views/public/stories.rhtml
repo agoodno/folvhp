@@ -1,0 +1,10 @@
+<h2>News stories</h2>
+<br/>
+<% for story in @stories %>
+<h3><%= story.headline %></h3>
+<p style="font-style: italic;">By: <%= story.byline %></p>
+<p style="margin-top: 2em;"><%= story.content %></p>
+<br/>
+<% end %>
+
+<br />

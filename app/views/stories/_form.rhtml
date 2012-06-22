@@ -1,0 +1,15 @@
+<%= error_messages_for :story %>
+
+<!--[form:state]-->
+<div id="maint-form">
+<p><label for="story_headline">Headline</label><br/>
+<%= text_field 'story', 'headline'  %></p>
+
+<p><label for="story_byline">Byline</label><br/>
+<%= text_field 'story', 'byline'  %></p>
+
+<p><label for="story_content">Content</label><br/>
+<%= text_area 'story', 'content'  %></p>
+</div>
+<!--[eoform:state]-->
+

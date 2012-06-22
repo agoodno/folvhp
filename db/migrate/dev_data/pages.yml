@@ -1,0 +1,114 @@
+welcome:
+  id: 1
+  title: welcome
+  content: <h1><img src="../images/sculpture.jpg" alt="sculpture on Lake View Hill" width="200" height="150" hspace="10" vspace="10" border="1" align="right" />Lake View Hill Park</h1>
+           <p>Lake View Hill Park is 48.3 acres in size and is located on the north side of Madison, 1202 – 1206 Northport Drive.</p>
+           <p>(Check out the recent Survey of Lake View Hill Park, <A HREF="/files/Survey-page1.pdf">page 1</A> and <A HREF="/files/Survey-page2.pdf">page 2</A>)</p>
+           <p>In 2006 the Dane County Board of Supervisors placed all 48 acres surrounding the Lake View Sanatorium, including Lakeview Woods behind it, and 5 acres donated by the children of John Esch, in permanent conservancy.  This preserves the property for public use as a park, except for the buildings, which may be used for county government.  Even the buildings are being preserved, since they have been placed in the National Register of Historic Places because the setting and the architecture show the early medical treatment for tuberculosis.</p>
+           <p>Dane County opened the Lake View Sanatorium in 1930.  Like the TB sanatoriums of the time it was built on a setting that offered beautiful walks, fresh air, and separation of the contagious from the general  population.  It was one of the last TB sanatoriums built and operated until 1966, when antibiotics proved to be a more effective treatment than fresh air.  The county has renovated the main building and continues to use it for the Department of Human Services.  The former Nurses Dorm stores county records.</p>
+           <p>The park offers passive recreation, walking the trails that were formerly used by the TB patients and viewing the City of Madison, Lake Mendota and the UW from one of the highest elevations in the county - 990 ft (near water tower).  Abundant wildlife and some rare species thrive in the woods.  The park also offers active restoration and educational activities organized by the Friends of Lake View Hill.  The front lawn is a popular place to fly kites, watch fireworks and go sledding.</p>
+           <p>Every year the Friends of Lake View Hill sponsors a Clean Up the Hill Day on the Saturday before Earth Day.  The Parks Department provides trash bags and a dumpster and we usually work for about two hours starting at noon.  In addition there are volunteer activities throughout the year for surveying birds, butterflies and plants, brushing and seeding.  For more information about FOLVH activities call Nelson Eisman at 608-244-2055.</p>
+           <p>To keep up to date of everything happening in our neighborhood and get reminders of upcoming meetings, subscribe to our discussion list below.</p>
+
+about:
+  id: 2
+  title: about
+  content: <p>Lake View Hill Park, located in Dane County, Wisconsin, is held in the public domain by the Dane County Parks Commission and is designated as a natural resource site and passive recreational park, linking natural and historic resources with education, environmental restoration and recreation.
+           <p>The goal of the Friends of Lake View Hill is to support the mission of the Dane County Parks Division for Lake View Hill to become an accessible yet passive, nature-oriented park that protects the area's natural resources while allowing visitors to explore the wonders of the unique environment of the area. The purpose of this charitable organization shall be to render support to Lake View Hill Park through programs and activities that provide education, restoration, preservation and development of cultural and natural resources representing Dane County's heritage. This organization will strive to support activities that are outlined in the Lake View Hill Park master plan produced by the Dane County Parks Division. This master plan is guided by protection of the natural topography, soils, vegetation patterns, environmental corridors, historic and cultural landmarks, and geology of the property formerly used for the Lake View Sanatorium, as well as the Esch Addition.
+           <p><a href="http://www.flickr.com/photos/82385052@N00/262647322/" title="Photo Sharing"><img src="http://farm1.static.flickr.com/78/262647322_b05b8ea635.jpg" width="500" height="374" alt="P4130022" /></a>
+
+history:
+  id: 3
+  title: history
+  content: <p>This is history</p>
+  
+links:
+  id: 4
+  title: links
+  content: <ul>
+             <li><a href="http://www.flickr.com/photos/82385052@N00/sets/72157594316053552/">Maria's Set</a></li>
+             <li><a href="http://www.flickr.com/photos/82385052@N00/sets/72157594185053624/">Photos - Seed Planting</a></li>
+           </ul>
+           
+news:
+  id: 5
+  title: news
+  content: <p>This is the news</p>
+  
+volunteer:
+  id: 6
+  title: volunteer
+  content: <p>This is for volunteers</p>
+
+join:
+  id: 7
+  title: join
+  content: <p>This is for joining the group</p>
+  
+shop:
+  id: 8
+  title: shop
+  content: <p>This is to buy stuff</p>
+
+login:
+  id: 9
+  title: login
+  content: <p>This the login page</p>
+  
+contactus:
+  id: 10
+  title: contactus
+  content: <p>Questions? Send correspondence to:<br/><br/><i>Friends of Lake View Hill Park, Inc.</i><br/>
+             ATTN Secretary, Board of Directors<br/>
+             POB 3272<br/>
+             Madison WI  53704 USA<br/>
+           </p>
+           <br/>
+           <p>Or contact one of our representatives:</p>
+           <table border="1" cellspacing="0" cellpadding="5">
+             <tr>
+               <td><b>Name</b></td>
+               <td><b>Office</b></td>
+               <td><b>Phone</b></td>
+             </tr>
+             <tr>
+               <td>Jon Becker</td>
+               <td>President</td>
+               <td>242-8525</td>
+             </tr>
+             <tr>
+               <td>Shannon Wall</td>
+               <td>Vice President</td>
+               <td>335-2959</td>
+             </tr>
+             <tr>
+               <td>Nelson Eisman</td>
+               <td>Secretary</td>
+               <td>244-2055</td>
+             </tr>
+             <tr>
+               <td>Andrew Goodnough</td>
+               <td>Treasurer</td>
+               <td>246-8788</td>
+             </tr>
+           </table>
+           <br/>
+           <p>Or join our Yahoo! discussion list:</p>
+           <form method="get" action="http://groups.yahoo.com/subscribe/folvh">
+             <input type="text" name="user" value="enter email address" size="20"><br/>
+             <input type="image" border="0" alt="Click here to join folvh" name="Click here to join folvh" src="http://us.i1.yimg.com/us.yimg.com/i/yg/img/i/us/ui/join.gif">
+           </form>
+           <br/>
+           <p>Friends volunteer work performed in association with:<br/><br/>
+             <i>Dane County Parks</i><br/>
+             1 Fen Oak Ct 234<br/>
+             Madison, Wisconsin 53718<br/>
+             608-242-4576<br/>
+             <a href="mailto:dane-parks@co.dane.wi.us">dane-parks@co.dane.wi.us</a><br/>
+           </p>
+           <p>For website related questions or corrections please <a href="/comment?source_page=contactus">email</a> us.</p>
+            
+facts:
+  id: 11
+  title: facts
+  content: <p>These are the facts</p>

@@ -1,0 +1,8 @@
+<% for column in JoinRequest.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @join_request.send(column.name) %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', edit_join_request_path(@join_request) %> |
+<%= link_to 'Back', join_requests_path %>

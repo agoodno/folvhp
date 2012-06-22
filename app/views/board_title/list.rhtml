@@ -1,0 +1,25 @@
+<div id="maint-list">
+<h2>Board Titles</h2>
+
+<table class="maint">
+  <tr>
+    <td class="maintheader">Description</td>
+    <td class="maintheaderactionlabel" colspan="3"><%= link_to 'New', :action => 'new' %></td>
+  </tr>
+  
+<% for board_title in @board_titles %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="maint"><%=h board_title.description %></td>
+    <td class="maintactionlabel">
+	  <%= link_to 'Show', :action => 'show', :id => board_title %>
+	  <%= link_to 'Edit', :action => 'edit', :id => board_title %>
+	  <%= link_to 'Delete', { :action => 'destroy', :id => board_title }, :confirm => 'Are you sure?', :method => :post %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @board_title_pages.current.previous } if @board_title_pages.current.previous %>
+<%= link_to 'Next page', { :page => @board_title_pages.current.next } if @board_title_pages.current.next %> 
+
+</div>

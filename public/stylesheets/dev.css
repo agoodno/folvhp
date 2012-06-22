@@ -1,0 +1,84 @@
+
+#header
+{
+	border-style: dashed;
+	border-width: medium;
+	border-color: white;
+}
+#sidebar
+{
+	border-style: dashed;
+	border-width: medium;
+	border-color: gray;
+}
+#main
+{
+	border-style: dashed;
+	border-width: medium;
+	border-color: lime;
+}
+#footer
+{
+	border-style: dashed;
+	border-width: medium;
+	border-color: black;
+}
+
+
+
+
+
+
+
+
+
+/*
+h1 {
+	border-style: dashed;
+	border-width: medium;
+	border-color: lime;
+}
+/*
+/*
+body {
+	border-style: dashed;
+	border-width: medium;
+	border-color: lime;
+}
+*/
+/*
+#main-column {
+  background: grey;
+}
+*/
+/*
+ul.left-menu {
+  background: blue;
+}
+*/
+/*
+ul.main-menu {
+  background: black;
+}
+*/
+/*
+#page {
+	border-style: dashed;
+	border-width: medium;
+	border-color: lime;
+}
+*/
+/*
+.lastUpdated {
+	border-style: dashed;
+	border-width: medium;
+	border-color: lime;
+}
+*/
+/*
+ul.menu {
+	border-style: dashed;
+	border-width: medium;
+	border-color: lime;
+}
+*/

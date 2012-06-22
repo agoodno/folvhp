@@ -1,0 +1,27 @@
+<%= error_messages_for 'household' %>
+
+<!--[form:household]-->
+<div id="maint-form">
+<p><label for="household_name">Name</label><br/>
+<%= text_field 'household', 'name'  %></p>
+
+<p><label for="household_line1">Line1</label><br/>
+<%= text_field 'household', 'line1'  %></p>
+
+<p><label for="household_line2">Line2</label><br/>
+<%= text_field 'household', 'line2'  %></p>
+
+<p><label for="household_city">City</label><br/>
+<%= text_field 'household', 'city'  %></p>
+
+<p><label for="household_state">State</label><br/>
+<select id="household_state_id" name="household[state_id]">
+<% @states.each do |state| -%>
+<option value="<%= state.id %>"<%= ' selected' if state.id == @household.state_id %>><%= state.name %></option>
+<% end %>
+</select></p>
+
+<p><label for="household_zip_code">Zip code</label><br/>
+<%= text_field 'household', 'zip_code'  %></p>
+</div>
+<!--[eoform:household]-->

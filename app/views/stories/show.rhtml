@@ -1,0 +1,10 @@
+<h2>Showing News Story</h2>
+
+<% for column in Story.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @story.send(column.name) %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>

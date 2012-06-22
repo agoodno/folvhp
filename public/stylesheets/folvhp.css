@@ -1,0 +1,26 @@
+@import "menu.css";
+
+h1
+{
+	font-size: 24px;
+#	margin: 20px;
+	text-align: center;
+}
+
+body
+{
+    #width: 72ex;
+	background: #4e6036;
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+	color: #444;
+	margin: left;
+}
+
+.lastUpdated
+{
+   	font-size: 9pt;
+	text-align: right;
+	margin-top: 10px;
+	margin-right: 5px;
+}

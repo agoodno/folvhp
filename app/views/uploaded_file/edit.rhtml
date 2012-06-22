@@ -1,0 +1,10 @@
+<h2>Editing File</h2>
+
+<% form_for :uploaded_file, :url => { :action => 'update', :id => @uploaded_file }, :html => { :multipart => true } do |f| -%>
+  <%= render :partial => 'form' %>
+  <p><%= submit_tag 'Edit' %></p>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @uploaded_file %> |
+<%= link_to 'Back', :action => 'list' %>
+

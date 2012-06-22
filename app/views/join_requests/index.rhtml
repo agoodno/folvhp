@@ -1,0 +1,16 @@
+<h1>Listing join_requests</h1>
+
+<table>
+  <tr>
+  	<td>Full Name</td>
+  </tr>
+  
+<% for join_request in @join_requests %>
+  <tr>
+	<td><%= join_request.full_name %></td>  	
+    <td><%= link_to 'Show', join_request_path(join_request) %></td>
+    <td><%= link_to 'Edit', edit_join_request_path(join_request) %></td>
+    <td><%= link_to 'Delete', join_request_path(join_request), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

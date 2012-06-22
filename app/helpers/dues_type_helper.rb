@@ -1,0 +1,2 @@
+module DuesTypeHelper
+end

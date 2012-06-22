@@ -1,0 +1,25 @@
+<div id="maint-list">
+<h2>Users</h2>
+
+<table class="maint">
+  <tr>
+    <td class="maintheader">Name</td>
+    <td class="maintheaderactionlabel" colspan="3"><%= link_to 'New', :action => 'new' %></td>
+  </tr>
+ 
+<% for user in @users %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="maint"><%=h user.name %></td>
+    <td class="maintactionlabel">
+      <%= link_to 'Show', :action => 'show', :id => user %>
+      <%= link_to 'Edit', :action => 'edit', :id => user %>
+      <%= link_to 'Delete', { :action => 'destroy', :id => user }, :confirm => 'Are you sure?', :method => :post %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @user_pages.current.previous } if @user_pages.current.previous %>
+<%= link_to 'Next page', { :page => @user_pages.current.next } if @user_pages.current.next %> 
+
+</div>

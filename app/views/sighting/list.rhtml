@@ -1,0 +1,25 @@
+<div id="maint-list">
+<h2>Sightings</h2>
+
+<table class="maint">
+  <tr>
+    <td class="maintheader">Title</td>
+    <td class="maintheaderactionlabel" colspan="3"><%= link_to 'New', :action => 'new' %></td>
+  </tr>
+  
+<% for sighting in @sightings %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="maint"><%=h sighting.title %></td>
+    <td class="maintactionlabel">
+      <%= link_to 'Show', :action => 'show', :id => sighting %>
+      <%= link_to 'Edit', :action => 'edit', :id => sighting %>
+      <%= link_to 'Delete', { :action => 'destroy', :id => sighting }, :confirm => 'Are you sure?', :method => :post %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @sighting_pages.current.previous } if @sighting_pages.current.previous %>
+<%= link_to 'Next page', { :page => @sighting_pages.current.next } if @sighting_pages.current.next %> 
+
+</div>

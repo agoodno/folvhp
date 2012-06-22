@@ -1,0 +1,10 @@
+<h2>Showing Board Title</h2>
+
+<% for column in BoardTitle.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @board_title.send(column.name) %>
+</p>
+<% end %>
+<br/>
+<%= link_to 'Edit', :action => 'edit', :id => @board_title %> |
+<%= link_to 'Back', :action => 'list' %>

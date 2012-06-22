@@ -1,0 +1,10 @@
+<h2>Events<div class="rss"><a href="/event/rss" title="Subscribe to the feed" rel="alternate" type="application/rss+xml"><img src="/images/rssicon.png" alt="" style="border:0; vertical-align: top;"/> RSS Feed</a></div></h2>
+
+<br/>
+<% for event in @events %>
+<h3><%= event.title %><br/></h3>
+<p style="font-style: italic;"><%= event.fmt_start_end %></p>
+<p style="margin-top: 2em;"><%= event.description %></p>
+<br/>
+<% end %>
+

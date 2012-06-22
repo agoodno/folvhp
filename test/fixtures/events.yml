@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  title: "Picnic"
+  description: "This is going to be a fabulous picnic this year with all the mosquitoes and such.  There will be hot dogs and corn."
+  start_datetime: "2007-07-16 10:00:00"
+  end_datetime: "2007-07-16 12:00:00"
+two:
+  id: 2
+  title: "Seed Planting Day"
+  description: "This is the time to plant seeds so no noxious weeds take root and ruin our plans for world domination.  Don't let the bugs bite you out there and don't break anymore of out tools!"

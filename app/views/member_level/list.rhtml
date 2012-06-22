@@ -1,0 +1,25 @@
+<div id="maint-list">
+<h2>Member Levels</h2>
+
+<table class="maint">
+  <tr>
+    <td class="maintheader">Description</td>
+    <td class="maintheaderactionlabel" colspan="3"><%= link_to 'New', :action => 'new' %></td>
+  </tr>
+  
+<% for member_level in @member_levels %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="maint"><%=h member_level.description %></td>
+    <td class="maintactionlabel">
+      <%= link_to 'Show', :action => 'show', :id => member_level %>
+      <%= link_to 'Edit', :action => 'edit', :id => member_level %>
+      <%= link_to 'Delete', { :action => 'destroy', :id => member_level }, :confirm => 'Are you sure?', :method => :post %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @member_level_pages.current.previous } if @member_level_pages.current.previous %>
+<%= link_to 'Next page', { :page => @member_level_pages.current.next } if @member_level_pages.current.next %> 
+
+</div>

@@ -1,0 +1,9 @@
+<h2>Editing Board Title</h2>
+
+<% form_tag :action => 'update', :id => @board_title do %>
+  <%= render :partial => 'form' %>
+  <p><%= submit_tag 'Edit' %></p>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @board_title %> |
+<%= link_to 'Back', :action => 'list' %>

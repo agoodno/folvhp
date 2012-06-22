@@ -1,0 +1,46 @@
+    begin
+      remove_column :members, :middle_name
+      remove_column :members, :line1
+      remove_column :members, :line2
+      remove_column :members, :city
+      remove_column :members, :state_id
+      remove_column :members, :zip_code
+    rescue
+      nil
+    end
+    
+    begin
+      add_column :members, :household_id, :integer, :null=>false
+      add_column :members, :member_level_id, :integer, :null=>false
+      add_column :members, :board_title_id, :integer, :null=>false
+      add_column :members, :business_phone, :string, :limit=>20
+      add_column :members, :mobile_phone, :string, :limit=>20
+      add_column :members, :email_address, :string, :limit=>50
+    rescue
+      nil
+    end
+
+    
+    begin
+      remove_column :members, :household_id
+      remove_column :members, :member_level_id
+      remove_column :members, :board_title_id
+      remove_column :members, :old_id
+      remove_column :members, :business_phone
+      remove_column :members, :mobile_phone
+      remove_column :members, :email_address
+    rescue
+      nil
+    end
+    
+    begin
+      add_column :members, :middle_name, :string, :limit=>50, :null=>false
+      add_column :members, :line1, :string, :limit=>50, :null=>false
+      add_column :members, :line2, :string, :limit=>50, :null=>false
+      add_column :members, :city, :string, :limit=>50, :null=>false
+      add_column :members, :state_id, :integer, :null=>false
+      add_column :members, :zip_code, :string, :limit=>10, :null=>false
+    rescue
+      nil
+    end
+

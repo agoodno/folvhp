@@ -1,0 +1,25 @@
+<div id="maint-list">
+<h2>Events</h2>
+
+<table class="maint">
+  <tr>
+    <td class="maintheader">Title</td>
+    <td class="maintheaderactionlabel" colspan="3"><%= link_to 'New', :action => 'new' %></td>
+  </tr>
+  
+<% for event in @events %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="maint"><%=h event.title %></td>
+    <td class="maintactionlabel">
+      <%= link_to 'Show', :action => 'show', :id => event %>
+	  <%= link_to 'Edit', :action => 'edit', :id => event %>
+      <%= link_to 'Delete', { :action => 'destroy', :id => event }, :confirm => 'Are you sure?', :method => :post %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @event_pages.current.previous } if @event_pages.current.previous %>
+<%= link_to 'Next page', { :page => @event_pages.current.next } if @event_pages.current.next %> 
+
+</div>

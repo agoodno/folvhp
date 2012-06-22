@@ -1,0 +1,8 @@
+<h2>Files</h2>
+<br/>
+<% for uploaded_file in @uploaded_files %>
+  <h3<%= link_to h(uploaded_file.filename), "/uploaded_files/" + uploaded_file.id.to_s + "/" + uploaded_file.filename %></h3>
+<% end %>
+
+<%= link_to 'Previous page', { :page => @uploaded_file_pages.current.previous } if @uploaded_file_pages.current.previous %>
+<%= link_to 'Next page', { :page => @uploaded_file_pages.current.next } if @uploaded_file_pages.current.next %> 

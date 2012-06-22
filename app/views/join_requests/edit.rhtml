@@ -1,0 +1,11 @@
+<h2>Editing join_request</h2>
+
+<% form_for(:join_request, :url => join_request_path(@join_request), :html => { :method => :put }) do |f| %>
+  <%= render :partial => 'form' %>
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', join_request_path(@join_request) %> |
+<%= link_to 'Back', join_requests_path %>

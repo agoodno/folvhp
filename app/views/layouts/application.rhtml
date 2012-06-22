@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Friends of Lake View Hill Park</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="shortcut icon" type="ximage/icon" href="/favicon.ico" />
+  <%= stylesheet_link_tag "screen" , :media => "screen" %>
+  <%= stylesheet_link_tag "print" , :media => "print" %>
+  <%= stylesheet_link_tag "dev" , :media => "all" %>
+  <%= javascript_include_tag :defaults %>
+  <%= calendar_date_select_includes "silver" %>
+</head>
+
+<body>
+<%= link_to image_tag("/images/folvhp_banner.jpg", :alt => "Friends of Lake View Hill Park", :class => "logo"), :controller => 'page', :action => 'view', :title => 'welcome' %>
+<div id="page">
+
+<div id="topnav">
+<%= link_to 'Home', :controller => 'page', :action => 'view', :title => 'welcome' %>
+<%= link_to 'Volunteer', :controller => 'page', :action => 'view', :title => 'volunteer' %>
+<%= link_to 'Join', new_join_request_path %>
+<%= link_to 'Shop', :controller => 'page', :action => 'view', :title => 'shop' %>
+<%= link_to 'Links', :controller => 'page', :action => 'view', :title => 'links' %>
+<%= link_to 'Admin', :controller => 'admin' %>
+</div>
+<div id="sidenav">
+<%= link_to 'About', :controller => 'page', :action => 'view', :title => 'about' %>
+<%= link_to 'News', :controller => 'public', :action => 'stories' %>
+<%= link_to 'Events', :controller => 'event', :action => 'index' %>
+<%= link_to "Files", :controller => 'uploaded_file', :action => 'index' %>
+<%= link_to 'Contact Us', :controller => 'contacts' %>
+<div id="quote">
+Historical perspectives of where we have been let us see more clearly our progress towards where we would like to be. 
+</div>
+</div>
+
+<div id="container">
+<div id="leftcol">
+  <% if flash[:notice] -%>
+    <div id="notice" ><%= flash[:notice] %></div>
+  <% end -%>
+  <%= yield :layout %>
+  <div class="lastUpdated">Last updated: September 4, 2007 | <%= link_to 'Comment on this page', :controller => 'comment', :id => params[:title] %></div>
+</div>
+  <div id="rightcol"> 
+    <h2>More about the Park</h2>
+    <ul>
+      <li><%= link_to 'Park Facts', :controller => 'page', :action => 'view', :title => 'facts' %></li>
+      <li><%= link_to 'History', :controller => 'page', :action => 'view', :title => 'history' %></li>
+    </ul>
+
+	  <h3>Virtual Exhibits</h3>
+    <ul>
+      <li><%= link_to 'Sightings in the Woods &raquo;', :controller => 'sighting' %></li>
+      <li><%= link_to 'Tour the Haunted Nurses Dorm &raquo;', :controller => 'welcome', :action => 'haunteddorm' %></li>
+    </ul>
+
+	   <h3>Related Articles</h3>
+    <ul>
+      <li><a href="http://legistar.cityofmadison.com/meetings/2007/5/4127_M_PEDESTRIAN_BICYCLE_MOTOR_VEHICLE_COMMISSION_07-05-22_Meeting_Minutes.pdf">On the proposed bike path (PDF)</a> </li>
+      <li><a href="http://www.madisoncommons.org/article.php?storyid=1032">Greener Lake View Hill</a></li>
+      <li><a href="http://www.madisoncommons.org/article.php?storyid=1116">Madison Water Chief Resigns</a></li>
+    </ul>
+    </div>
+</div>
+<div class="footer">
+<img src="/images/footer.jpg" alt="architectural detail" width="170" height="50" align="left" hspace="20"/>
+<p><img src="/images/vcss.png" alt="W3C CSS validated"  width="88" height="31" align="right" />
+<img src="/images/valid-xhtml10.png" alt="W3C Valid XHTML" width="88" height="31" align="right" />&copy;
+ <script language="JavaScript" type="text/javascript">
+<!--
+var right_now=new Date();
+document.write(right_now.getFullYear());
+
+// -->
+  </script>
+ &middot; Friends of Lake View Hill Park
+ </p>
+</div>
+</div>
+</body>
+</html>

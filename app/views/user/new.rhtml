@@ -1,0 +1,8 @@
+<h2>Creating User</h2>
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <p><%= submit_tag 'Create' %></p>
+<% end %>
+
+<%= link_to 'Back', :action => 'list' %>

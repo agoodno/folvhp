@@ -1,0 +1,9 @@
+<h2>Editing Dues Type</h2>
+
+<% form_tag :action => 'update', :id => @dues_type do %>
+  <%= render :partial => 'form' %>
+  <p><%= submit_tag 'Edit' %></p>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @dues_type %> |
+<%= link_to 'Back', :action => 'list' %>

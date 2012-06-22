@@ -1,0 +1,15 @@
+<%= error_messages_for 'sighting' %>
+
+<!--[form:sighting]-->
+<div id="maint-form">
+<p><label for="sighting_title">Title</label><br/>
+<%= text_field 'sighting', 'title'  %></p>
+
+<p><label for="sighting_description">Description</label><br/>
+<%= text_area 'sighting', 'description'  %></p>
+
+<p><label for="sighting_entry_date">End Date/Time</label><br/>
+<%= calendar_date_select 'sighting', 'entry_date', :time => :mixed %></p>
+</div>
+<!--[eoform:sighting]-->
+

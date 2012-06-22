@@ -1,0 +1,8 @@
+<h2>Creating News Story</h2>
+
+<% form_for(:story, :url => stories_path) do |f| %>
+  <%= render :partial => 'form' %>
+  <p><%= submit_tag 'Create' %></p>
+<% end %>
+
+<%= link_to 'Back', stories_path %>

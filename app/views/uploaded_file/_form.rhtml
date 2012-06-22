@@ -1,0 +1,12 @@
+<%= error_messages_for 'uploaded_file' %>
+
+<!--[form:uploaded_file]-->
+<div id="maint-form">
+<p><label for="uploaded_file_data">File</label><br/>
+<p style="font-weight: bold">
+<span style="padding-bottom: 1em;"><%=h @uploaded_file.filename %></span><br/>
+<%= file_field 'uploaded_file', 'uploaded_data' %>
+</p>
+<p><label style="vertical-align: top; padding-right: 1em;" for="uploaded_file_is_public">Public</label><%= check_box("uploaded_file", "is_public") %></p>
+</div>
+<!--[eoform:uploaded_file]-->

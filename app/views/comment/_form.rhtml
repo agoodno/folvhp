@@ -1,0 +1,13 @@
+<%= error_messages_for 'event' %>
+
+<!--[form:event]-->
+<p><label for="comment_subject">Subject</label><br/>
+<%= text_field 'comment', 'subject', :value => @start_subject, :size => 50  %></p>
+
+<p><label for="comment_message">Comment</label><br/>
+<%= text_area 'comment', 'message', "cols" => 50, "rows" => 15  %></p>
+
+<p><label for="comment_sender_email">Your Email</label><br/>
+<%= text_field 'comment', 'sender_email'  %></p>
+<!--[eoform:event]-->
+

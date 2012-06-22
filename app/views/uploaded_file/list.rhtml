@@ -1,0 +1,25 @@
+<div id="maint-list">
+<h2>Uploaded Files</h2>
+
+<table class="maint">
+  <tr>
+    <td class="maintheader">Filename</td>
+    <td class="maintheaderactionlabel" colspan="3"><%= link_to 'New', :action => 'new' %></td>
+  </tr>
+    
+<% for uploaded_file in @uploaded_files %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="maint"><%= link_to h(uploaded_file.filename), "/uploaded_files/" + uploaded_file.id.to_s + "/" + uploaded_file.filename %></td>
+    <td class="maintactionlabel">
+	  <%= link_to 'Show', :action => 'show', :id => uploaded_file %>
+      <%= link_to 'Edit', :action => 'edit', :id => uploaded_file %>
+      <%= link_to 'Delete', { :action => 'destroy', :id => uploaded_file }, :confirm => 'Are you sure?', :method => :post %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @uploaded_file_pages.current.previous } if @uploaded_file_pages.current.previous %>
+<%= link_to 'Next page', { :page => @uploaded_file_pages.current.next } if @uploaded_file_pages.current.next %> 
+
+</div>

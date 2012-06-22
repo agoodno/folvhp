@@ -1,0 +1,45 @@
+<p>Questions? Send correspondence to:<br/>
+  <br/>
+  <i>Friends of Lake View Hill Park, Inc.</i><br/>
+     ATTN Secretary, Board of Directors<br/>
+     POB 3272<br/>
+    Madison WI, 53704 USA<br/>
+</p>
+<br/>
+<p>Or contact one of our representatives:</p>
+<div id="maint-list">
+<table class="maint" cellspacing="0" cellpadding="5">
+  <tr>
+    <td class="maintheader">Name</td>
+    <td class="maintheader">Office</td>
+    <td class="maintheader">Phone</td>
+  </tr>
+<% for board_member in @board_members %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="maint"><%= board_member.full_name %></td>
+    <td class="maint"><%= board_member.board_title.description %></td>
+    <td class="maint"><%= board_member.home_phone %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br/>
+<p>Or join our Yahoo! discussion list:</p>
+
+<form method="get" action="http://groups.yahoo.com/subscribe/folvh">
+<input type="text" name="user" value="enter email address" size="20"><br/>
+<input type="image" border="0" alt="Click here to join folvh" name="Click here to join folvh" src="http://us.i1.yimg.com/us.yimg.com/i/yg/img/i/us/ui/join.gif">
+</form>
+
+<p>Or join our member discussion list:</p>
+<a href="http://tyndale.hostingrails.com/mailman/listinfo/members_friends.lakeviewhill.org">Member List</a>
+
+<br/>
+<p>Friends volunteer work performed in association with:<br/><br/>
+<i>Dane County Parks</i><br/>
+   1 Fen Oak Ct 234<br/>
+   Madison, Wisconsin 53718<br/>
+   608-242-4576<br/>
+   <a href="mailto:dane-parks@co.dane.wi.us">dane-parks@co.dane.wi.us</a><br/>
+</p>
+<p>For website related questions or corrections please <a href="/comment?source_page=contactus">email</a> us.</p>
